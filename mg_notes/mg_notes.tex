@@ -1,0 +1,55 @@
+\documentclass[12pt,a4paper]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{CJKutf8}
+
+%%%%
+%设置页边距
+\usepackage{geometry}
+\geometry{left=1cm,right=1cm,top=1.5cm,bottom=1.5cm}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{indentfirst} 
+\usepackage{ulem}
+\usepackage{tikz}	% 绘图
+\usepackage{framed} % 加边框
+\usepackage[colorlinks,linkcolor=black,citecolor=green]{hyperref}  % 超链接
+\usepackage{bm}  % 公式粗体
+\usepackage{makecell} %表格项多行
+
+
+\includeonly{chp/Math,
+chp/BackPropagation,
+%chp/NetWorks,
+chp/Whiten,
+chp/Transfer_Learning}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{CJK}{UTF8}{gkai}
+
+%% 目录  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+\include{chp/Math}
+\include{chp/BackPropagation}
+\include{chp/Transfer_Learning}
+\include{chp/Whiten}
+\include{chp/NetWorks}	% 网络图
+
+%% 参考文献  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% bibtex方式 
+\bibliographystyle{ieeetr}
+\bibliography{mg_BibTex}
+
+%% bibliography方式 
+%\begin{thebibliography}{mg}
+%\bibitem{positive definite  matrix} “Positive-definite matrix - Wikipedia, the free encyclopedia.” [Online]. Available: https://en.wikipedia.org/wiki/Positive-definite\_matrix. [Accessed: 09-Sep-2016].
+%
+%\bibitem{Hilbert space} “Hilbert space - Wikipedia, the free encyclopedia.” [Online]. Available: https://en.wikipedia.org/wiki/Hilbert\_space. [Accessed: 08-Sep-2016]. 
+%\end{thebibliography}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{CJK}
+\end{document}

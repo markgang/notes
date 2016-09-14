@@ -1,0 +1,41 @@
+\chapter{Transfer Learning}
+\section{RKHS}\cite{RKHS}
+In functional analysis (a branch of mathematics), a \textbf{reproducing kernel Hilbert space (RKHS)} is a Hilbert space of functions in which point evaluation is a continuous linear functional.\par
+Roughly speaking, this means that if two functions $f$ and $g$ in the RKHS are close in norm, i.e., $\|f-g\|$ is small, then $f$ and $g$ are also pointwise close, i.e., $|f(x)-g(x)|$ is small for all $x$. The reverse need not be true. \par
+Let $X$ be an arbitrary set and $H$ a Hilbert space of real-valued functions on $X$. The evaluation functional over the Hilbert space of functions $H$ is a linear functional that evaluates each function at a point $x$,
+\[ L_x : f \mapsto f(x) \forall f \in H \]
+
+We say that $H$ is a reproducing kernel Hilbert space if $L_x$ is continuous at any $f$ in $H$ or, equivalently, if for all $x$ in $X$, $L_x$ is a bounded operator on $H$ , i.e. there exists some $M > 0$ such that
+\[ L_x [f]:= f(x)\leq M	\|f\|_H \forall f \in H \] 
+
+\section{MMD}\cite{MMD}
+define the maximum mean discrepancy (MMD) as:\par
+$p$ and $q$ be distributions defined on a domain $X$ \par
+obervations: $X:=\left\lbrace x_1,\dots,x_m \right\rbrace $,
+$Y:=\left\lbrace y_1,\dots,y_n \right\rbrace $,drawn independently and identically distributed (i.i.d.) from
+$p$ and $q$ respectively
+
+\begin{align}
+MMD[\mathcal{F},p,q] := \underset{f\in \mathcal{F}}{sup} \left( E_{x\sim p } [f(x)] - E_{y\sim p } [f(y)] \right) \\
+MMD[\mathcal{F},X,Y] := \underset{f\in \mathcal{F}}{sup} \left( \frac{1}{m} \sum_{i=1}^m f(x_i) - \frac{1}{n} \sum_{i=1}^n f(y_i)\right) 
+\end{align}
+
+Since $E_p[f(x)=\left\langle \mu[p],f\right\rangle]$,we may rewrite\par
+\[ MMD[\mathcal{F},p,q]=\underset{\|f\|_{\mathcal{H} \leq 1}}{sup} \left\langle \mu[p] - \mu[q],f\right\rangle = \|\mu[p] - \mu [q]\|_{\mathcal{H}}\]
+
+using $\mu [X] := \frac{1}{m}\sum_{i=1}^m$ and $k(x,x')=\left\langle \phi(x),\phi(x') \right\rangle $
+empirical estimate of MMD is :
+\[ MMD[\mathcal{F},X,Y]=\left[ \frac{1}{m^2} \sum_{i,j=1}^m k(x_i,y_j) - \frac{2}{mn} \sum_{i,j=1}^{m,n} k(x_i,y_j) + \frac{1}{n^2} \sum_{i,j=1}^n k(y_i,y_j) \right]^{\frac{1}{2}} \]
+
+\section{Deep Transfer Network}\cite{Deep Transfer Network}
+
+Denote $X^s=[x^s_1,\dots,x^s_{n^s}] \in R^{d\times n^s}$ and 
+$X^t=[x^t_1,\dots,x^t_{n^t}] \in R^{d \times n^t}$ as the data matrices of $D^s$ and $D^t$ respectively,$X=[X^s,X^t]$ as the combination of $X^s$ and $X^t$ \par
+\begin{align}
+MMD&=\|\frac{1}{n^s} \sum_{i=1}^{n^s}x_i^s - \frac{1}{n^t} \sum_{j=1}^{n^t}x_j^t \|^2_2\\
+&=Tr(XMX^T)
+\end{align}
+where $M$ is the MMD matrix. Let $M_{ij}$ be one element of $M$.\par
+\begin{align}
+M_{ij}=\{
+\end{align}

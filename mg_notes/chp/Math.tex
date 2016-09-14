@@ -1,0 +1,241 @@
+\chapter{Math}
+
+\section{定义}
+\includegraphics[scale=0.4]{fig/numbers.eps}
+\cite{_infimum_????}\par
+infimum——下确界，缩写 inf，复数 infima \par
+supremum——上确界，缩写 sup，复数 suprema
+
+\subsection{柯西序列(Cauchy sequence)}
+\cite{_cauchy_????}
+is a sequence whose elements become arbitrarily close to each other as the sequence progresses. More precisely, given any small positive distance, all but a finite number of elements of the sequence are less than that given distance from each other.\par
+\includegraphics[scale=0.5]{fig/Cauchy_exam.eps}
+\includegraphics[scale=0.5]{fig/Cauchy_not.eps}
+
+\subsection{完备(Completeness)(\underline{by mg:柯西序列收敛与此})}
+\cite{_cauchy_????}
+A metric space $X$ in which every Cauchy sequence converges to an element of $X$ is called \textbf{complete}.
+
+\subsection{紧空间(Compact spaces)(\underline{by mg:都有子序列收敛于此})}
+\cite{_cauchy_????}
+A metric space $M$ is \textbf{compact} if every sequence in $M$ \underline{has a} subsequence that converges to a point in $M$. This is known as sequential compactness and, in metric spaces (but not in general topological spaces), is equivalent to the topological notions of countable compactness and compactness defined via open covers.
+
+\subsection{赫米特矩阵 (Hermitian matrix)}
+共轭转置（conjugate transpose）等于自身的矩阵（主要针对复数情况）：
+\[ a_{ij}= \overline{a_{ji}} \ \text{或者} \  A=\overline{A^T}\]
+可以认为是对实对称矩阵的扩展。
+
+\subsection{格拉姆矩阵 (Gramian matrix)}
+In linear algebra, the Gram matrix (Gramian matrix or Gramian) of a set of vectors $v_1, \dots, v_n$ in an inner product space is the Hermitian matrix of \textbf{inner products}, whose entries are given by $G_{ij}=\left< v_i,v_j \right>$
+
+
+
+
+
+
+\subsection{正定}
+\subsubsection{正定函数 }
+
+\subsubsection{正定矩阵 positive definite matrix} 
+\cite{_positive-definite_????}
+In linear algebra, a symmetric $n \times n$ real matrix $M$ is said to be \textbf{positive definite} if the scalar $z^T M z$ is positive for every non-zero column vector $z$ of $n$ real numbers.
+
+例如，$I=\begin{bmatrix} 1 & 0 \\ 0 & 1\end{bmatrix}$ 是正定的。Seen as a real matrix, it is symmetric, and, for any non-zero column vector z with real entries a and b, one has
+\[ z^TIz=[a \ b] \begin{bmatrix} 1 & 0 \\ 0 & 1\end{bmatrix} \begin{bmatrix} a \\ b\end{bmatrix} =a^2+b^2 \]
+
+
+
+\section{拓扑}
+\subsection{Topology(by mg:重点在连续)}
+\cite{_topology_????}
+
+\textbf{topology} is concerned with the properties of space that are preserved under \textbf{continuous deformations}, such as stretching and bending, but not tearing or gluing. This can be studied by considering a collection of subsets, called open sets, that satisfy certain properties, turning the given set into what is known as a topological space. Important topological properties include connectedness and compactness.
+
+Formally, let $X$ be a set and let $\tau$ be a family of subsets of $X$. Then $\tau$ is called a topology on $X$ if:\par
+1. Both the empty set and $X$ are elements of $\tau$ \par
+2. Any union of elements of $\tau$ is an element of $\tau$ \par
+3. Any intersection of finitely many elements of $\tau$ is an element of $\tau$\par
+If $\tau$ is a topology on $X$, then the pair $(X, \tau)$ is called a \textbf{topological space}. The notation $X_\tau$ may be used to denote a set $X$ endowed with the particular topology $\tau$.
+
+\subsection{Topological vector space}
+\cite{_topological_????}
+
+A topological vector space $X$ is a vector space over a topological field $K$ (most often the real or complex numbers with their standard topologies) that is endowed with a topology such that vector addition $X \times X \rightarrow X$ and scalar multiplication $K \times X \rightarrow X$ are \textbf{continuous functions }(where the domains of these functions are endowed with product topologies).
+
+\section{度量}
+\subsection{Metric space(\underline{by mg: 定义了距离})}
+\cite{_metric_????}
+
+A metric space is a set for which distances between all members of the set are defined. Those distances, taken together, are called a \textbf{metric} on the set.\par
+正式定义：A metric space is an ordered pair $(M,d)$ where $M$ is a set and $d$ is a metric on $M$, i.e., a function, $d: M \times M \rightarrow R$ , such that for any $x, y, z \in M$  , the following holds:\par
+\begin{tabular}[l]{lll}
+\hline
+1. & $d(x,y) \geq 0$ & non-negativity or separation axiom \\ 
+2. & $d(x,y)=0 \Leftrightarrow x=y$ & Identity of Indiscernibles \\ 
+3. & $d(x,y)=d(y,x)$ & symmetry \\ 
+4. & $d(x,z) \leq d(x,y) + d(y,z)$ & subadditivity or trangle inequality\\
+\hline
+\end{tabular}
+
+\subsection{完备（度量）空间(Complete metric space)(\underline{by mg: 柯西序列收敛于此})}
+\cite{_complete_????}
+A metric space $M$ is called complete (or a Cauchy space) if every \textbf{Cauchy sequence }of points in $M$ has a limit that is also in $M$ or, alternatively, if every Cauchy sequence in $M$ converges in $M$.\par
+Intuitively, a space is complete if there are no "points missing" from it (inside or at the boundary). For instance, the set of rational numbers is not complete, because e.g. $\sqrt 2$ is "missing" from it, even though one can construct a Cauchy sequence of rational numbers that converges to it. It is always possible to "fill all the holes", leading to the completion of a given space.
+
+
+\section{范函}
+
+\subsection{范数 (Norm)(\underline{by mg:向量的量化})}
+\cite{_norm_????}
+A norm is a function that assigns a strictly positive length or size to each vector in a vector space—save for the zero vector, which is assigned a length of zero. A \textbf{seminorm}, on the other hand, is allowed to assign zero length to some non-zero vectors (in addition to the zero vector).\par
+Given a vector space $V$ over a subfield $F$ of the complex numbers, a norm on $V$ is a function $p: V \rightarrow R$ with the following properties:\par
+For all $a\in F$ and all $u, v \in V$,\par
+1. $p(a\bm v) = |a| p(\bm v)$, (absolute homogeneity or absolute scalability).\par
+2. $p(\bm u + \bm v) \leq p(\bm u) + p(\bm v)$ (triangle inequality or subadditivity).\par
+3. If $p(\bm v) = 0$ then $\bm v$ is the zero vector (separates points).
+例：\par
+\begin{itemize}
+\item{Absolute-value norm : $\|x\|=|x|$} 
+\item{Euclidean norm ($L^2$ norm) : $ \|x\| : \sqrt{x_1^2+\dots+x_n^2}$ }
+\item{Taxicab norm or Manhattan norm ($l_1$ norm): $\|x\|_1 := \sum_{i=1}^n |x_i|$}
+\item{p-norm : $\|x\|_p := \left( \sum_{i=1}^n |x_i|^p \right) ^\frac{1}{p}$ }\par
+The partial derivative of the p-norm \par
+\[ \frac{\partial}{\partial x_k} \|x\|_p = \frac{x_k |x_k|^{p-2}}{\|x_k\|_p^{p-1}} \]
+The derivative with respect to x \par
+\[ \frac{\partial \|x\|_p}{\partial x} = \frac{x \circ |x_k|^{p-2}}{\|x\|_p^{p-1}} \]
+where $\circ$ denotes Hadamard product and $|\cdot|$ is used for absolute value of each component of the vector.
+\item{Maximum norm (special case of: infinity norm, uniform norm, or supremum norm)}
+If $\bm x=(x_1,x_2,\dots,x_n)$,then:\par
+\[ \|x\|_\infty := max(|x_1|,\dots,|x_n|) \]
+\end{itemize}
+
+
+The concept of \textbf{unit circle} (the set of all vectors of norm 1) is different in different norms: for the 1-norm the unit circle in $R^2$ is a square, for the 2-norm (Euclidean norm) it is the well-known unit circle, while for the infinity norm it is a different square. For any p-norm it is a superellipse (with congruent axes).\par
+\includegraphics[scale=0.5]{fig/exp_norm_unit_circle.eps}
+
+\subsection{向量空间 (vector space)}
+\cite{_vector_????}
+A vector space (also called a \textbf{linear space}) is a collection of objects called \textbf{vectors}, which may be added together and multiplied ("scaled") by numbers, called \textbf{scalars} in this context. \par
+A vector space over a field $F$ is a set $V$ together with two operations that satisfy the eight axioms listed below. Elements of $V$ are commonly called \textbf{vectors}. Elements of $F$ are commonly called \textbf{scalars}. \par
+
+\begin{tabular}[l]{|l|l|l|}
+\hline
+1 & Associativity of addition（结合律） & $\bm u + (\bm v + \bm w) = (\bm u + \bm v) + \bm w$ \\ \hline
+2 & Commutativity of addition（交换律） & $\bm u + \bm v = \bm v + \bm u$ \\ \hline
+3 & Identity element of addition & \makecell[l]{There exists an element $0 \in V$, \\ called the \textbf{zero vector}, \\such that $\bm v + 0 = \bm v$ for all $ v \in V$.} \\ \hline
+4 & Inverse elements of addition & \makecell[l]{For every $ \bm v \in V$, \\there exists an element $ \textnormal{-} \bm v \in V$,\\ called the \textbf{additive inverse} of $ \bm v$, \\such that $\bm v + (\textnormal{-}\bm v) = 0$.} \\ \hline
+5 & \makecell[l]{Compatibility of scalar multiplication \\ with field multiplication} & $a(b\bm v) = (ab)\bm v$ \\ \hline
+6 & Identity element of scalar multiplication & \makecell[l]{ $1 \bm v = \bm v$, where 1 denotes \\the multiplicative identity in $F$.} \\ \hline
+7 & \makecell[l]{Distributivity of scalar multiplication with \\ respect to vector addition} & $a(\bm u + \bm v) = a\bm u + a\bm v$ \\ \hline
+8 & \makecell[l]{ Distributivity of scalar multiplication with \\ respect to field addition} & $(a + b)\bm v = a\bm v + b\bm v$ \\
+\hline
+\end{tabular}
+
+向量空间的例子：
+\begin{itemize}
+\item{
+\textbf{coordinate space}\par
+usually denoted $F^n$.A vector space composed of  n-tuples of a field F,$(a_1,a_2,\dots,a_n)$ where $a_i$ is an element of $F$
+}
+\item{
+\textbf{Complex numbers and other field extensions}\par
+}
+\item{
+\textbf{Function spaces}\par
+定义了函数加法:$(f+g)(w)=f(w)+g(w)$
+}
+\item{
+\textbf{Linear equations}\par
+}
+\end{itemize}
+
+\subsection{点积（dot product)(\underline{by mg:2个序列的量化})}
+\cite{dot product}
+the dot product or scalar product is an algebraic operation that takes two equal-length sequences of numbers (usually coordinate vectors) and returns \textbf{a single number}. 
+
+\textbf{Algebraic definition}:
+\[ A \cdot B=\sum_{i=1}^n A_iB_i=A_1B_1+A_2B_2+\dots+A_nB_n\]
+例如：
+\begin{align*}
+[1,2,-5] \cdot [4,-2,-1]&=(1)(4)+(3)(-2)+(-5)(-1) \\
+&= 4-6+5 \\
+&= 3
+\end{align*}
+
+\textbf{Geometric definition}:
+\[A \cdot B=\|A\| \|B\|cos(\theta)\]
+
+由此有以下重要结论\par
+\underline{若$A$和$B$正交(orthogonal)，则$A \cdot B = 0$} \par
+另外，$ A \cdot A =\|A\|^2 $ \par
+则，$ \|A\|= \sqrt{A \cdot A} $ 
+
+另外，向量$A$和向量$B$的scalar projection(or scalar component)\par
+\[ A_B=\|A\|cos\theta \]
+In terms of the geometric definition of the dot product, this can be rewritten
+\[ A_B=A \cdot \widehat{B}\]
+where $\widehat{B}=B/\|B\|$,is the unit vector in the direction of B.
+
+因此，点积可表示为：$A \cdot B=A_B \|B\|=B_A \|A\|$
+
+
+\subsection{内积(inner product)}
+\cite{inner product space}
+The field of scalars denoted $F$ is either the field of real numbers $R$ or the field of complex numbers $C$.\par
+Formally, an inner product space is a vector space $V$ over the field $F$ together with an inner product, i.e., with a map\par
+\[\left< \cdot,\cdot \right> : V \times V \rightarrow F\]
+that satisfies the following three axioms for all vectors $x , y , z \in V$ and all scalars $a \in F$:\par
+\begin{itemize}
+\item {Conjugate symmetry}
+\[ \left< x,y \right> = \overline{\left< y,x \right>} \]
+\item{Linearity in the first argument}
+\[ \left< ax,y \right> = a \left< x,y \right> \]
+\[ \left< x+y,z \right>= \left< x,z \right> + \left< y,z \right> \]
+\item{Positive-definiteness}
+\[ \left< x,x \right> \geq 0 \]
+\[ \left< x,x \right> = 0 \Leftrightarrow x=0 \]
+\end{itemize}
+
+范数相关：\par
+\begin{itemize}
+\item {定义内积空间的范数}: $\|x\|=\sqrt{\left< x,x \right>}$
+\item {Cauchy–Schwarz inequality}: $|\left< x,y \right>| \leq \|x\| \cdot \|y\|$
+\item {angel}: $angle(x,y)=arccos \frac{\left< x,y \right>}{\|x\| \cdot \|y\|}$
+\item {Orthogonal正交}: 内积为0 , $ \left< x,y \right>=0$
+\item {Homogeneity同质性}: for $x$ an element of $V$ and $r$ a scalar , $\|r \cdot x\| = |r| \cdot \|x\|$
+\item {Triangle inequality}: $ \|x+y\| \leq \|x\| + \|y\|$
+\item {Pythagorean theorem}: Whenever $x,y$ are in $V$ and \underline{$\left< x,y \right>=0$}, then, $\|x\|^2 + \|y\|^2 = \|x+y\|^2$
+\end{itemize}
+
+
+\subsection{内积空间 (inner product space)(\underline{by mg:定义了内积的向量空间)}}
+\cite{inner product space}
+An inner product space is a vector space with an additional structure called an \textbf{inner product}. This additional structure associates each pair of vectors in the space with a scalar quantity known as the inner product of the vectors.由此，可以定义向量的长度和向量间的夹角，以及向量正交等概念。\par
+A complete space with an inner product is called a \textbf{Hilbert space}.
+
+\subsection{欧几里德空间 (Euclidean space)}
+\cite{Hilbert space}
+Euclidean space consisting of three-dimensional vectors, denoted by $R^3$, and equipped with the dot product. The dot product takes two vectors $x$ and $y$, and produces a real number $x \cdot y$. If $x$ and $y$ are represented in Cartesian coordinates, then the dot product is defined by
+\[ \left( x_1,x_2,x_3\right) \cdot \left( y_1,y_2,y_3\right) = x_1 y_1 + x_2 y_2 + x_3 y_3 \]
+
+\subsection{希尔伯特空间 (Hilbert space)}
+\cite{Hilbert space}
+The dot product satisfies the properties:\par
+1.It is \textbf{symmetric} in $x$ and $y$: \[ x \cdot y = y \cdot x \] \par
+2.It is \textbf{linear} in its first argument: 
+\[ \left( ax_1 + bx_2 \right) \cdot y = ax_1 \cdot y + bx_2 \cdot y\]
+for any scalars $a$, $b$, and vectors $x_1$, $x_2$, and $y$.\par
+3.It is \textbf{positive definite}: for all vectors $x$:
+\[ x \cdot x \geq 0 \] with equality if and only if $x = 0$.
+
+by mg:在这里，正定，在内积空间被定义为向量的内积 $\geq 0$
+
+\underline{Every finite-dimensional inner product space is also a Hilbert space}.\par
+向量长度length定义为范数$\|x\|$，和角度的关系：
+\[ x \cdot y = \|x \| \|y\| cos \theta\]
+
+
+\section{核}
+\subsection{Kernel trick}
+\cite{Kernel trick}
+Kernel methods can be thought of as instance-based learners. rather than learning some fixed set of parameters corresponding to the features of their inputs, they instead "remember" the $i$-th training example $\left(x_i,y_i \right)$ and learn for it a corresponding weight $w_i$. Prediction for unlabeled inputs, i.e., those not in the training set, is treated by the application of a similarity function $k$, called a \textbf{kernel}, between the unlabeled input $x'$ and each of the training inputs $x_i$. For instance, a kernelized binary classifier typically computes a weighted sum of similarities

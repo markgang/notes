@@ -1,0 +1,87 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: mg_notes.aux
+A level-1 auxiliary file: chp/Math.aux
+White space in argument---line 35 of file chp/Math.aux
+ : \citation{dot
+ :               product}
+I'm skipping whatever remains of this command
+White space in argument---line 36 of file chp/Math.aux
+ : \citation{inner
+ :                 product space}
+I'm skipping whatever remains of this command
+White space in argument---line 39 of file chp/Math.aux
+ : \citation{inner
+ :                 product space}
+I'm skipping whatever remains of this command
+White space in argument---line 40 of file chp/Math.aux
+ : \citation{Hilbert
+ :                   space}
+I'm skipping whatever remains of this command
+White space in argument---line 41 of file chp/Math.aux
+ : \citation{Hilbert
+ :                   space}
+I'm skipping whatever remains of this command
+White space in argument---line 45 of file chp/Math.aux
+ : \citation{Kernel
+ :                  trick}
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: chp/BackPropagation.aux
+A level-1 auxiliary file: chp/Transfer_Learning.aux
+White space in argument---line 5 of file chp/Transfer_Learning.aux
+ : \citation{Deep
+ :                Transfer Network}
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: chp/Whiten.aux
+I couldn't open auxiliary file chp/NetWorks.aux
+---line 23 of file mg_notes.aux
+ : \@input{chp/NetWorks.aux
+ :                         }
+I'm skipping whatever remains of this command
+The style file: ieeetr.bst
+Database file #1: mg_BibTex.bib
+Warning--I didn't find a database entry for "chapter2"
+Warning--I didn't find a database entry for "RKHS"
+Warning--I didn't find a database entry for "MMD"
+You've used 9 entries,
+            1876 wiz_defined-function locations,
+            514 strings with 4420 characters,
+and the built_in function-call counts, 994 in all, are:
+= -- 108
+> -- 9
+< -- 0
++ -- 9
+- -- 0
+* -- 20
+:= -- 92
+add.period$ -- 9
+call.type$ -- 9
+change.case$ -- 9
+chr.to.int$ -- 0
+cite$ -- 9
+duplicate$ -- 36
+empty$ -- 163
+format.name$ -- 0
+if$ -- 289
+int.to.chr$ -- 0
+int.to.str$ -- 9
+missing$ -- 0
+newline$ -- 39
+num.names$ -- 0
+pop$ -- 81
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 27
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 10
+write$ -- 65
+(There were 8 error messages)
